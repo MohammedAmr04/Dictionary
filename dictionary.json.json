@@ -1,0 +1,28 @@
+{
+    
+    "API (Application Programming Interface)":"A set of rules and tools that allow different applications to communicate with each other.",
+    
+    "Algorithm":"A set of ordered steps or procedures used to solve a problem or perform a specific task.",
+    "Arrow Function":"provides a concise syntax for writing functions, especially useful for short, one-line operations.",
+    "Compiler":"A program that converts code written in a high-level programming language (e.g., C\u002B\u002B) into machine-readable code.",
+    "Data Structure":"A way to organize and store data so it can be accessed and managed efficiently.",
+    "Debugging":"The process of identifying and fixing bugs or errors in a program.",
+    "Framework":"A pre-built collection of tools and libraries designed to simplify the development of applications.",
+    "Function":"A block of code designed to perform a specific task.",
+    "Git ":"is a distributed version control system that helps developers track code changes, collaborate, and manage\u00A0project\u00A0history.",
+    "GitHub":"is a platform that hosts Git repositories online, making collaboration between developers easy. It provides additional features such as pull requests, issue tracking, and team collaboration tools.",
+    "IDE (Integrated Development Environment)":"A software application that provides comprehensive facilities for software development, including a code editor, debugger, and build tools.",
+    "Immutable":"A property of data that cannot be changed after it is created.",
+    "Machine Learning":"A branch of artificial intelligence where computers learn from data to make predictions or decisions without being explicitly programmed.",
+    "Map":"A collection type in F# that maps keys to values.",
+    "Merging":"creates a merge commit, keeping the commit history of both branches.",
+    "OOP (Object-Oriented Programming)":"A programming paradigm based on objects containing data (attributes) and behaviors (methods).",
+    "Pipeline":"A syntax in F# (|\u003E) for chaining function calls in a readable manner.",
+    "Rebasing":"rewrites the history of the branch you\u0027re working on by applying your commits on top of the latest commits of the branch you\u0027re rebasing onto (usually main)",
+    "Talaat":"Back-End \u0639\u0642\u0628\u0627\u0644 \u0645\u0627 \u062A\u0641\u0631\u062C",
+    "The Browser Object Model (BOM)":"represents the browser window and allows interaction with the browser beyond the HTML document.",
+    "The Document Object Model (DOM)":"represents the structure of aweb page. It allows JavaScript to manipulate HTML and CSS.",
+    "Version Control":"A system that helps track changes to files and codebases, making collaboration and rollback easier.",
+    "branch":"is a separate line of development in Git. It allows you to work on different versions of your project simultaneously."
+
+}
