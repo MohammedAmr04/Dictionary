@@ -30,3 +30,17 @@ if not (File.Exists(filePath)) then
 
 // Load the dictionary from the file
 let mutable dictionary = loadDictionary filePath
+
+// Main form
+let form = new Form(Text = "Digital Dictionary", Width = 600, Height = 600)
+
+// Controls
+let txtWord = new TextBox(Left = 20, Top = 20, Width = 200, PlaceholderText = "Enter word")
+let txtDefinition = new TextBox(Left = 20, Top = 60, Width = 200, PlaceholderText = "Enter definition")
+let btnAddOrUpdate = new Button(Text = "Add/Update", Left = 240, Top = 20, Width = 100)
+let btnDelete = new Button(Text = "Delete", Left = 240, Top = 60, Width = 100)
+let txtSearch = new TextBox(Left = 20, Top = 100, Width = 200, PlaceholderText = "Search")
+let btnSearch = new Button(Text = "Search", Left = 240, Top = 100, Width = 100)
+let btnShowAll = new Button(Text = "Show All", Left = 360, Top = 100, Width = 100)
+let lstResults = new ListBox(Left = 20, Top = 140, Width = 550, Height = 250)
+let btnSave = new Button(Text = "Save and Exit", Left = 20, Top = 400, Width = 120)
