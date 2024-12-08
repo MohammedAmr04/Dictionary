@@ -43,4 +43,24 @@ let txtSearch = new TextBox(Left = 20, Top = 100, Width = 200, PlaceholderText =
 let btnSearch = new Button(Text = "Search", Left = 240, Top = 100, Width = 100)
 let btnShowAll = new Button(Text = "Show All", Left = 360, Top = 100, Width = 100)
 let lstResults = new ListBox(Left = 20, Top = 140, Width = 550, Height = 250)
-let btnSave = new Button(Text = "Save and Exit", Left = 20, Top = 400, Width = 120)
+let btnSave = new Button(Text = "Save and Exit", Left = 20, Top = 400, Width = 120)
+
+
+btnAddOrUpdate.Click.Add(fun _ ->
+    let word = txtWord.Text
+    let definition = txtDefinition.Text
+    if not (String.IsNullOrWhiteSpace(word) || String.IsNullOrWhiteSpace(definition)) then
+        dictionary <- addOrUpdateWord word definition dictionary
+        MessageBox.Show(sprintf "Word '%s' added/updated successfully." word, "Success") |> ignore
+    else
+        MessageBox.Show("Please enter both a word and a definition.", "Error") |> ignore
+)
+
+btnDelete.Click.Add(fun _ ->
+    let word = txtWord.Text
+    if dictionary |> Map.containsKey word then
+        dictionary <- deleteWord word dictionary
+        MessageBox.Show(sprintf "Word '%s' deleted successfully." word, "Success") |> ignore
+    else
+        MessageBox.Show(sprintf "Word '%s' not found in the dictionary." word, "Error") |> ignore
+)
