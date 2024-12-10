@@ -64,3 +64,28 @@ btnDelete.Click.Add(fun _ ->
     else
         MessageBox.Show(sprintf "Word '%s' not found in the dictionary." word, "Error") |> ignore
 )
+//Add search functionality and display results
+btnSearch.Click.Add(fun _ ->
+    let keyword = txtSearch.Text.ToLower()
+    if not (String.IsNullOrWhiteSpace(keyword)) then
+        let results = 
+            dictionary
+            |> Map.filter (fun key _ -> key.ToLower().Contains(keyword))
+            |> Map.toList
+        lstResults.Items.Clear()
+        if results.IsEmpty then
+            lstResults.Items.Add("No matching words found.") |> ignore
+        else
+            results |> List.iter (fun (word, definition) -> lstResults.Items.Add(sprintf "%s: %s" word definition) |> ignore)
+    else
+        MessageBox.Show("Please enter a search keyword.", "Error") |> ignore
+)
+
+btnShowAll.Click.Add(fun _ ->
+    lstResults.Items.Clear()
+    if Map.isEmpty dictionary then
+        lstResults.Items.Add("The dictionary is empty.") |> ignore
+    else
+        dictionary
+        |> Map.iter (fun word definition -> lstResults.Items.Add(sprintf "%s: %s" word definition) |> ignore)
+)
