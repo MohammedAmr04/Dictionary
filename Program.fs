@@ -89,3 +89,21 @@ btnShowAll.Click.Add(fun _ ->
         dictionary
         |> Map.iter (fun word definition -> lstResults.Items.Add(sprintf "%s: %s" word definition) |> ignore)
 )
+btnSave.Click.Add(fun _ ->
+    saveDictionary filePath dictionary
+    MessageBox.Show("Dictionary saved successfully. Exiting the application.", "Success") |> ignore
+    form.Close()
+)
+
+// Add controls to form
+form.Controls.Add(txtWord)
+form.Controls.Add(txtDefinition)
+form.Controls.Add(btnAddOrUpdate)
+form.Controls.Add(btnDelete)
+form.Controls.Add(txtSearch)
+form.Controls.Add(btnSearch)
+form.Controls.Add(btnShowAll)
+form.Controls.Add(lstResults)
+form.Controls.Add(btnSave)
+
+form
